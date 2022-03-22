@@ -1,0 +1,39 @@
+.pedidos {
+  background: #ffae00;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.pedidosTitulo {
+  color: white;
+  margin-top: 20px;
+}
+.pedidoParagrafo {
+  color: white;
+}
+.boxpedidos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.boxpedidos img {
+  height: 300px;
+  width: 300px;
+  border: 5px solid #ffff;
+}
+
+/* .alignnone {
+  padding: 3px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+}
+ */
+@media (max-width: 320px) {
+  .boxpedidos img {
+    height: 200px;
+    width: 200px;
+  }
+}
