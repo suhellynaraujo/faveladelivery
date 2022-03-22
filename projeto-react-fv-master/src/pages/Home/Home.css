@@ -1,0 +1,48 @@
+/*.p {
+  color: white;
+}
+.textoH1 {
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10%;
+  text-shadow: 1px 1px 1px #005fb2;
+  color: #fff;
+  text-indent: 10px;
+  width: 10px;
+}
+.textoP {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10%;
+  padding-top: auto;
+}
+
+.destaque {
+  text-shadow: 1px 1px 1px;
+  color: #005fb2;
+}
+.btn {
+  margin: auto;
+  padding: auto;
+  border: 0;
+  border-radius: 50px;
+  font-weight: bolder;
+  background-color: #21429c;
+  color: white;
+}
+
+.btn:hover {
+  transition: 0.3s;
+  background-color: #21429c;
+  color: #fff;
+  font-size: 'Helvetica';
+}
+.foto {
+  display: flex;
+  background: no-repeat;
+  margin-top: auto;
+  padding-left: 1000px;
+  background-image: linear-gradient(to right, #ffae00, #ffba26);
+}*/

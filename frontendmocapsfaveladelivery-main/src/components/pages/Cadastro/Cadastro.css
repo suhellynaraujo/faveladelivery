@@ -2,7 +2,7 @@ p {
   font-size: large;
 }
 
-input {
+.inputs {
   width: 900px;
   height: 37px;
   top: 713px;

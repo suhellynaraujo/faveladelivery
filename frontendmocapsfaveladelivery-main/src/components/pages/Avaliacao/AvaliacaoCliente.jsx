@@ -1,8 +1,27 @@
+import NotaCliente from "../Notas/Nota"
+import { useEffect, useState } from "react";
 import "./Avaliacao.css";
- function AvaliacaoCliente() {
+
+type Props = {
+  notaId : string;
+}
+
+function AvaliacaoCliente({notaId} : Props) {
+
+  const [nota, setNota] = useState<NotaCliente>();
+  
+  useEffect((event) => {
+    event.preventDefault();
+    api.post(`${baseUrl}/notacliente/${notaId}` )
+    .then(response => {
+      setNota(response.data)
+    });
+  }, [notaId]);
+ 
+
   return (
     <div className="Avaliacao">
-      <div className="bannerAvaliacao">
+      <div className="bannerAvaliacao container">
         <div className="container containertitulo">
           <h1 className="tituloAvaliacao">
             Questionário de satisfação do cliente
@@ -12,11 +31,89 @@ import "./Avaliacao.css";
             melhoria dos nossos serviços de acordo com as suas expectativas e
             sugestões. Agradecemos a sua colaboração!
           </p>
+        </div>
+        <div>
+          <div className="listAvaliacao">
+            <div className="list">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="radioNoLabel"
+                id="radioNoLabel1"
+                value=""
+                aria-label="..."
+              />
+              Excelente
+            </div>
+            <div className="list">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="radioNoLabel"
+                id="radioNoLabel1"
+                value=""
+                aria-label="..."
+              />
+              Muito Bom
+            </div>
+            <div className="list">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="radioNoLabel"
+                id="radioNoLabel1"
+                value=""
+                aria-label="..."
+              />
+              Bom
+            </div>
+            <div className="list">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="radioNoLabel"
+                id="radioNoLabel1"
+                value=""
+                aria-label="..."
+              />
+              Regular
+            </div>
+            <div className="list">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="radioNoLabel"
+                id="radioNoLabel1"
+                value=""
+                aria-label="..."
+              />
+              Ruim
+            </div>
+            <div className="list">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="radioNoLabel"
+                id="radioNoLabel1"
+                value=""
+                aria-label="..."
+              />
+              Péssimo
+            </div>
+          </div>
 
-        
+          <input
+            type="checkbox"
+            class="btn-check"
+            id="btn-check-2"
+            checked
+            autocomplete="off"
+          />
+          <label class="btn btn-primary" for="btn-check-2">
+            Enviar
+          </label>
         </div>
       </div>
-     
     </div>
   );
 }
